@@ -1,5 +1,5 @@
 # USAGE
-# python3 yolo_image.py --image data/armas (767).jpg 
+# python3 gun_detection.py --image images/armas_767.jpg 
 
 import cv2
 import numpy as np
