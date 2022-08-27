@@ -6,6 +6,11 @@ Real-time suspect detection using [Face Recognition](https://github.com/ageitgey
 - Detection of weapon (gun) in an image and in real-time
 - Detection of suspicious person
 
+<p align="center"> <img src="./examples/detection_1.png" width="350" height="300"> <img src="./examples/detection_2.png" width="350" height="300"> </p>
+
+<p align="center"> <img src="./examples/detection_3.png" width="350" height="300"> <img src="./examples/detection_4.png" width="350" height="300"></p>
+
+
 ## Model training
 
 1. Gun detection model is trained using the pretrained [YOLOv3](https://pjreddie.com/darknet/yolo/) model; 
@@ -25,6 +30,8 @@ pip install
   opencv-python
   numpy
   vidstream
+  imutils
+  dlib
 ```
 
 ## How to run 
@@ -55,7 +62,7 @@ To train your suspect detection model using your own set of images:
 
 1. collect the images of the people you want to include in the non-suspected person's list
 2. collect approx. 50-100 images per person
-3. follow the following hierarchy to store the images
+3. follow the following hierarchy to store the images:
 
 ```shell
 ├── face_recg_dataset
@@ -69,13 +76,13 @@ To train your suspect detection model using your own set of images:
     ... 
 ```
 
-4. Once you have collected the images, now you need to train the model using ```train_face_recg.py```
+4. Once you have collected the images, now you need to train the model using ```train_face_recognize.py```
 
 ```
-python train_face_recg.py --dataset face_recg_dataset --encodings encodings.pickl
+python train_face_recognize.py --dataset face_recg_dataset --encodings encodings.pickl
 ```
 
-5. When training complete you will see encodings.pickl saved in your project directory
+5. When training is complete, you will see encodings.pickl saved in your project directory
 6. Now you can replace this file when calling ```suspect_detection.py``` file
 
 ```
