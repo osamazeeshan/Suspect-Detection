@@ -1,4 +1,3 @@
-# USAGE
 # python3 gun_detection.py --image images/armas_767.jpg 
 
 import cv2

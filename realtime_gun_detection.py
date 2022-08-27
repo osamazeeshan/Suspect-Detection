@@ -1,3 +1,5 @@
+# python3 realtime_gun_detection.py 
+
 import cv2
 import numpy as np
 import time

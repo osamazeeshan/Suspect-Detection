@@ -1,4 +1,3 @@
-# USAGE
 # python3 suspect_detection.py --encodings encoding.pickle
 
 from imutils.video import VideoStream
